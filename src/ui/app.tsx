@@ -29,27 +29,24 @@ function App() {
                 } catch (error) {
                     return value;
                 }
-                const host = url.hostname;
+
+                let host = url.hostname;
+
+                if (url.protocol === "file:" || url.protocol === "view-source:") {
+                    host = url.protocol;
+                }
+
+                const tabToBeAdded = {
+                    name: `${!tab.title || tab.title.length == 0 ? tab.url : tab.url}`,
+                    url: `${tab.url}`,
+                    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                    id: tab.id!,
+                };
 
                 if (host in value) {
-                    value[host] = [
-                        ...value[host],
-                        {
-                            name: `${tab.title || tab.url}`,
-                            url: `${tab.url}`,
-                            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                            id: tab.id!,
-                        },
-                    ];
+                    value[host] = [...value[host], tabToBeAdded];
                 } else {
-                    value[host] = [
-                        {
-                            name: `${tab.title || tab.url}`,
-                            url: `${tab.url}`,
-                            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                            id: tab.id!,
-                        },
-                    ];
+                    value[host] = [tabToBeAdded];
                 }
                 return value;
             }, {});
