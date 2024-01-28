@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    overscroll-behavior: none;
+    width: 350px;
+    height: 600px;
+    @apply bg-neutral;
+}
+
+* {
+    user-select: none;
+}
