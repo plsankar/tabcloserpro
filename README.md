@@ -1,8 +1,24 @@
-# Tab Closer Pro
-
+<p align="center" width="100%">
+	<img alt="Colorhunter - Chrome Extenstion to export the color palette of a website in a single click." src="logo.png">
+</P>
+<p align="center">
 Effortlessly close your browser tabs based on the websites with Tab Closer Pro.
+</p>
 
-Note: This is a free and open source extension. its source code can be found at: [https://github.com/plsankar/tabcloserpro](https://github.com/plsankar/tabcloserpro)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+![GitHub issues](https://img.shields.io/github/issues/plsankar/tabcloserpro)
+![GitHub package.json dynamic](https://img.shields.io/github/package-json/version/plsankar/tabcloserpro)
+![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/dbpgdhpcdmbglccedednilahahdlnaio)
+
+## Installation
+
+[![Chrome Web Store](chrome-web-store.png)](https://chromewebstore.google.com/detail/tab-closer-pro/dbpgdhpcdmbglccedednilahahdlnaio)
+
+## Screenshots
+
+<p align="center" width="100%">
+	<img alt="Colorhunter - Chrome Extenstion to export the color palette of a website in a single click." src="screenshot.jpg">
+</P>
 
 ## Key Features:
 
@@ -15,3 +31,43 @@ Note: This is a free and open source extension. its source code can be found at:
 -   Open Tab Closer Pro by clicking on the extension icon.
 -   View the list of open websites and corresponding tab counts.
 -   Select a website and choose to close it along with all related tabs or keep it open.
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/plsankar/tabcloserpro
+```
+
+Go to the project directory
+
+```bash
+  cd tabcloserpro
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Run development build
+
+```bash
+  npm run dev
+```
+
+or run the production build
+
+```bash
+  npm run build
+```
+
+## Support
+
+For support or feedback email [me@lakshmisankar.com](me@lakshmisankar.com).
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
