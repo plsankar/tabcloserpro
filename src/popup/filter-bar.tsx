@@ -9,7 +9,7 @@ const FilterBar = () => {
     const { filter, setFilter } = useAppStore();
 
     return (
-        <div className="flex items-center gap-3 p-3 bg-white border-b">
+        <div className="flex items-center gap-2 p-2 border-b bg-muted">
             <div className="">
                 <Toggle
                     title="Pinned"
@@ -61,6 +61,7 @@ const FilterBar = () => {
             </div>
             <div>
                 <Input
+                    className="text-xs bg-background"
                     type="search"
                     placeholder="Search..."
                     value={filter.search}
