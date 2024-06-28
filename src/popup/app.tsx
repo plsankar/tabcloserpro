@@ -30,6 +30,7 @@ function App() {
 
         const items = tabs
             .filter((tab) => tab.url !== undefined && tab.url !== null && tab.url.length !== 0 && tab.id !== undefined)
+            .filter((tab) => tab.url?.includes(filter.search) || tab.title?.includes(filter.search))
             .reduce<TabGroups>((value, tab) => {
                 let url;
                 try {
@@ -96,8 +97,9 @@ function App() {
                             initial={{ y: "100%", opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.03 * index, duration: 0.3 }}
+                            key={`domain-${key}-${index}`}
                         >
-                            <TabGroupListItem host={key} key={`domain-${key}-${index}`} tabs={groupItems[key]} />
+                            <TabGroupListItem host={key} tabs={groupItems[key]} />
                         </motion.div>
                     ))}
                 </AnimatePresence>

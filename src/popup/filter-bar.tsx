@@ -3,6 +3,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/u
 
 import { Toggle } from "@/components/ui/toggle";
 import { useAppStore } from "./stores/appstore";
+import { Input } from "@/components/ui/input";
 
 const FilterBar = () => {
     const { filter, setFilter } = useAppStore();
@@ -16,7 +17,6 @@ const FilterBar = () => {
                     pressed={filter.pinned}
                     onPressedChange={(checked) => {
                         setFilter({
-                            ...filter,
                             pinned: checked == true,
                         });
                     }}
@@ -30,7 +30,6 @@ const FilterBar = () => {
                     pressed={filter.currentWindow}
                     onPressedChange={(checked) => {
                         setFilter({
-                            ...filter,
                             currentWindow: checked == true,
                         });
                     }}
@@ -43,7 +42,6 @@ const FilterBar = () => {
                     value={filter.sort}
                     onValueChange={(v) => {
                         setFilter({
-                            ...filter,
                             sort: v as "name" | "count",
                         });
                     }}
@@ -60,6 +58,18 @@ const FilterBar = () => {
                         <SelectItem value="count">Tabs Count</SelectItem>
                     </SelectContent>
                 </Select>
+            </div>
+            <div>
+                <Input
+                    type="search"
+                    placeholder="Search..."
+                    value={filter.search}
+                    onChange={(event) => {
+                        setFilter({
+                            search: event.target.value || "",
+                        });
+                    }}
+                />
             </div>
         </div>
     );

@@ -20,7 +20,9 @@ const TabGroupListItem: FC<{ host: string; tabs: TabItem[] }> = ({ host, tabs })
                     <p className="truncate">{host}</p>
                 </div>
                 <div className="w-[25px]">
-                    <Badge variant="outline">{`${tabs.length}`.padStart(2, "0")}</Badge>
+                    <Badge variant="default" className="text-xs">
+                        {`${tabs.length}`.padStart(2, "0")}
+                    </Badge>
                 </div>
                 <div className="z-[2] w-[25px] h-6 absolute top-1/2 -translate-y-14 group-hover:-translate-y-1/2 left-4 transition-all duration-200">
                     <CloseButton

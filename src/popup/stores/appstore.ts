@@ -4,13 +4,14 @@ export type Filter = {
     pinned: boolean;
     currentWindow: boolean;
     sort: "name" | "count";
+    search: string;
 };
 
 type AppStore = {
     isMenuOpen: boolean;
     setIsMenuOpen: (value: boolean) => void;
     filter: Filter;
-    setFilter: (filter: Filter) => void;
+    setFilter: (filter: Partial<Filter>) => void;
 };
 
 export const useAppStore = create<AppStore>()((set) => ({
@@ -20,6 +21,7 @@ export const useAppStore = create<AppStore>()((set) => ({
         pinned: false,
         currentWindow: true,
         sort: "name",
+        search: "",
     },
-    setFilter: (filter) => set((state) => ({ ...state, filter })),
+    setFilter: (filter) => set((state) => ({ ...state, filter: { ...state.filter, ...filter } })),
 }));
