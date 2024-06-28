@@ -11,7 +11,7 @@ const NavigationMenu = () => {
         <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetContent side="left" className="p-3">
                 <SheetHeader className="space-y-1">
-                    <SheetTitle className="leading-none text-base">TabCloser Pro</SheetTitle>
+                    <SheetTitle className="text-base leading-none">TabCloser Pro</SheetTitle>
                     <SheetDescription className="leading-none">V{chrome.runtime.getManifest().version}</SheetDescription>
                 </SheetHeader>
                 <div className="flex flex-col gap-2 mt-3">
@@ -29,7 +29,7 @@ const NavigationMenu = () => {
 const NavigationMenuItem: FC<{ icon: LucideIcon; title: string; action?: () => void }> = ({ icon: Icon, title, action }) => {
     return (
         <button
-            className="flex flex-row items-center gap-4 px-3 py-2 transition-all duration-300 rounded hover:bg-primary hover:text-neutral"
+            className="flex flex-row items-center gap-4 px-3 py-2 transition-all duration-300 rounded hover:bg-muted hover:text-foreground"
             title={title}
             onClick={action}
         >

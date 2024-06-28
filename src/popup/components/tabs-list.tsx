@@ -26,7 +26,7 @@ const TabsList: FC<{ isOpen: boolean; tabs: TabItem[] }> = ({ isOpen, tabs }) =>
                         {tabs.map((item, index) => (
                             <div
                                 key={index}
-                                className="px-4 py-3 truncate transition-all duration-100 hover:bg-primary hover:text-neutral"
+                                className="px-4 py-2 text-xs truncate transition-all duration-100 bg-secondary hover:bg-primary/20"
                                 onClick={() => handleOnClick(item)}
                             >
                                 {item.name}
