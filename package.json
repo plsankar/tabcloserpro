@@ -2,7 +2,7 @@
     "name": "tabcloserpro",
     "description": "Effortlessly close your browser tabs based on the websites",
     "private": true,
-    "version": "1.0.0",
+    "version": "1.0.1",
     "type": "module",
     "author": {
         "name": "Lakshmi Sankar",
