@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-	<img alt="Colorhunter - Chrome Extenstion to export the color palette of a website in a single click." src="logo.png">
+	<img alt="Tab Closer Pro" src="logo.png">
 </P>
 <p align="center">
 Effortlessly close your browser tabs based on the websites with Tab Closer Pro.
@@ -17,7 +17,7 @@ Effortlessly close your browser tabs based on the websites with Tab Closer Pro.
 ## Screenshots
 
 <p align="center" width="100%">
-	<img alt="Colorhunter - Chrome Extenstion to export the color palette of a website in a single click." src="screenshot.jpg">
+	<img alt="Tab Closer Pro" src="screenshot.jpg">
 </P>
 
 ## Key Features:
