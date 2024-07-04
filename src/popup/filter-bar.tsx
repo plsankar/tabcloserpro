@@ -55,7 +55,7 @@ const FilterBar = () => {
                     </SelectTrigger>
                     <SelectContent>
                         <SelectItem value="name">Name</SelectItem>
-                        <SelectItem value="count">Tabs Count</SelectItem>
+                        <SelectItem value="count">Tab Counts</SelectItem>
                     </SelectContent>
                 </Select>
             </div>
